@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="script.js"></script>
+   <title>Js tarih fonk</title>
+   <style>
+       .header{
+           text-align: center;
+           font-family: sans-serif;
+           font-size: 18px;
+           background: red;
+       }
+       .container{
+           text-align: center;
+           font-size: 30 px;
+
+       }
+   </style>
+</head>
+<body>
+   <div id= div1 class="container">
+
+   </form>
+   
+   </div>
+   <script>
+       
+       const dateObj = new Date();
+       const month = dateObj.getUTCMonth() + 1;
+       const day = dateObj.getUTCDate();
+       const year = dateObj.getUTCFullYear();
+       
+       var userdate = window.prompt("../../.. şeklinde tarih giriniz");
+       var userday =  parseInt(userdate[0] + userdate[1]);
+       var usermonth = parseInt(userdate[3] + userdate[4]);
+       var useryear = parseInt((userdate[6] + userdate[7] + userdate[8] + userdate[9]));
+       var usertotal = useryear*365 + usermonth*30 + userday;
+       var todaytotal = year*365 + month*30 + day;
+       var difference = todaytotal - usertotal;
+       if(difference < 0){
+           document.write(Math.abs(difference));
+           document.write(" gün sonra");
+       }
+       else{
+           document.write(Math.abs(difference));
+           document.write(" gün önce");
+
+       }
+       
+       
+       
+       
+
+   </script>
+
+
+   
+</body>
+</html>
